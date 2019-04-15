@@ -1,4 +1,10 @@
-package Drivers;
+/**
+ * @author - Tereza Holm
+ *
+ * Driver for Chrome.
+ */
+
+package drivers;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

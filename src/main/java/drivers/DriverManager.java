@@ -1,4 +1,11 @@
-package Drivers;
+/**
+ * @author - Tereza Holm
+ *
+ * Creates Webdriver according to choice of browser.
+ */
+
+package drivers;
+
 
 import org.openqa.selenium.WebDriver;
 

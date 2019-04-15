@@ -1,4 +1,10 @@
-package Drivers;
+/**
+ * @author - Tereza Holm
+ *
+ * Allows to choose from browsers from enum DriverType.
+ */
+
+package drivers;
 
 
 public class DriverManagerFactory {
