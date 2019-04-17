@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,13 @@ public class ChangePasswordPage extends BasePage {
     }
 
     public boolean isPageVisible() {
-        return oldPassword.isDisplayed();
+        try {
+            waitForElement(oldPassword);
+            return oldPassword.isDisplayed();
+        }
+        catch(NoSuchElementException e){
+            return false;
+        }
     }
 
     @FindBy(name = "oldpassword")

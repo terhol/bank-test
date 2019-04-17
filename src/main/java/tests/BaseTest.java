@@ -1,22 +1,18 @@
-/**
- * @author - Tereza Holm
- *
- * Basic test page, sets up driver and tears it down before and after test.
- */
-
 package tests;
 
 import drivers.DriverManager;
 import drivers.DriverManagerFactory;
 import drivers.DriverType;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.UnhandledAlertException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.testng.annotations.*;
 import pages.MenuPage;
 import pages.LoginPage;
 
+/**
+ * @author - Tereza Holm
+ * <p>
+ * Basic test page, sets up driver and tears it down before and after test.
+ */
 public class BaseTest {
     protected WebDriver driver;
     protected DriverManager driverManager;
@@ -28,28 +24,35 @@ public class BaseTest {
         driver = driverManager.getWebDriver();
     }
 
-    @BeforeTest
+    @BeforeMethod
     public void navigateToPage() {
         driver.get("http://demo.guru99.com/V4/index.php");
     }
 
-    /*@AfterTest
-    public void logOut(){
-        menuPage = new MenuPage(driver);
-        menuPage.logOut();
-    }*/
-
-
+    @AfterMethod
+    public void logOutFromApp(){
+        LoginPage loginPage = new LoginPage(driver);
+        try{loginPage.isPageVisible();
+        }
+        catch(NoSuchElementException | TimeoutException e){
+            logOut();
+        }
+    }
 
     @AfterSuite
     public void tearDown() {
         driver.quit();
     }
 
-
     public void login(String userName, String password) {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.logIn(userName, password);
+    }
+
+    public void logOut() {
+        MenuPage menuPage = new MenuPage(driver);
+        menuPage.logOut();
+        isAlertPresent();
     }
 
     public boolean isAlertPresent() {
@@ -62,8 +65,5 @@ public class BaseTest {
             System.out.println("No alert found.");
         }
         return isPresent;
-
-
     }
-
 }

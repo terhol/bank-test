@@ -1,13 +1,5 @@
-/**
- * @author - Tereza Holm
- * <p>
- * Test for changing password and verifying if manager can log in with this new password - test cases SM1,SM2 and SM3.
- */
-
 package tests.tests_manager;
 
-
-import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -16,6 +8,12 @@ import pages.MenuPage;
 import pages.LoginPage;
 import tests.BaseTest;
 
+/**
+ * @author - Tereza Holm
+ * <p>
+ * Test for changing password and verifying if manager can log in with this new password - test cases SM1,SM2 and SM3.
+ */
+//TODO better solution for case when Test changes password but fails before setting it back
 public class TestPasswordChange extends BaseTest {
     private final String USERNAME = "mngr188296";
     private String oldPassword = "1!";
@@ -34,9 +32,6 @@ public class TestPasswordChange extends BaseTest {
         ChangePasswordPage changePasswordPage = new ChangePasswordPage(driver);
         Assert.assertTrue(changePasswordPage.isPageVisible());
 
-        MenuPage menuPage = new MenuPage(driver);
-        menuPage.logOut();
-        isAlertPresent();
 
     }
 
@@ -54,26 +49,22 @@ public class TestPasswordChange extends BaseTest {
 
     }
 
-    @Test (priority = 2, dependsOnMethods = {"changePasswordCorrect"})
+    @Test(priority = 2, dependsOnMethods = {"changePasswordCorrect"})
     public void logInWithNewPassword() {
         login(USERNAME, currentPassword);
         MenuPage menuPage = new MenuPage(driver);
         Assert.assertEquals(menuPage.getMessage(), "Welcome To Manager's Page of Guru99 Bank");
 
-        menuPage.logOut();
-        isAlertPresent();
     }
 
     @AfterClass
-    public void changePasswordBack(){
+    public void changePasswordBack() {
         login(USERNAME, currentPassword);
         chooseChangePasswordButton();
         changePasswordToNew(newPassword, oldPassword);
         currentPassword = oldPassword;
 
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
-
+        isAlertPresent();
     }
 
     private void chooseChangePasswordButton() {
