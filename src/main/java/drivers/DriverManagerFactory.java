@@ -1,4 +1,10 @@
-package Drivers;
+/**
+ * @author - Tereza Holm
+ *
+ * Allows to choose from browsers from enum DriverType.
+ */
+
+package drivers;
 
 
 public class DriverManagerFactory {
@@ -14,6 +20,9 @@ public class DriverManagerFactory {
                 break;
             case IE:
                 driverManager = new IEDriverManager();
+                break;
+            case EDGE:
+                driverManager = new EdgeDriverManager();
                 break;
             default:
                 driverManager = new ChromeDriverManager();

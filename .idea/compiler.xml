@@ -9,5 +9,6 @@
         <module name="seleniumbankfinal" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>

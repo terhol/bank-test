@@ -1,5 +1,11 @@
-package Drivers;
+/**
+ * @author - Tereza Holm
+ *
+ * Available browsers.
+ */
+
+package drivers;
 
 public enum DriverType {
-    CHROME, FIREFOX, IE;
+    CHROME, FIREFOX, IE, EDGE;
 }

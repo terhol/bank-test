@@ -1,4 +1,10 @@
-package Drivers;
+/**
+ * @author - Tereza Holm
+ *
+ * Driver for Internet Explorer.
+ */
+
+package drivers;
 
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
