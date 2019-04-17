@@ -1,6 +1,6 @@
 /**
  * @author - Tereza Holm
- * <p>
+ *
  * Basic test page, sets up driver and tears it down before and after test.
  */
 
@@ -11,24 +11,34 @@ import drivers.DriverManagerFactory;
 import drivers.DriverType;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import pages.MenuPage;
 import pages.LoginPage;
 
 public class BaseTest {
     protected WebDriver driver;
-    private DriverManager driverManager;
+    protected DriverManager driverManager;
+    private MenuPage menuPage;
 
     @BeforeSuite
     public void initializeDriver() {
-        driverManager = DriverManagerFactory.getWebDriver(DriverType.FIREFOX);
+        driverManager = DriverManagerFactory.getWebDriver(DriverType.CHROME);
         driver = driverManager.getWebDriver();
     }
 
     @BeforeTest
     public void navigateToPage() {
-        driver.get("http://demo.guru99.com/V3/");
+        driver.get("http://demo.guru99.com/V4/index.php");
     }
+
+    /*@AfterTest
+    public void logOut(){
+        menuPage = new MenuPage(driver);
+        menuPage.logOut();
+    }*/
+
 
 
     @AfterSuite
@@ -48,7 +58,7 @@ public class BaseTest {
             Alert alert = driver.switchTo().alert();
             isPresent = true;
             alert.accept();
-        } catch (NoAlertPresentException e) {
+        } catch (NoAlertPresentException | UnhandledAlertException e) {
             System.out.println("No alert found.");
         }
         return isPresent;

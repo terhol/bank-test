@@ -5,10 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class WelcomePage extends BasePage {
-    public WelcomePage(WebDriver driver) {
+public class MenuPage extends BasePage {
+    public MenuPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
+    }
+
+    public boolean isPageVisible() {
+        return false;
     }
 
     @FindBy(linkText = "Change Password")
@@ -20,10 +24,6 @@ public class WelcomePage extends BasePage {
     @FindBy(xpath = "/html/body/table/tbody/tr/td/table/tbody/tr[2]/td/marquee")
     private WebElement welcomePageMessage;
 
-
-    public void clickOnChangePassword() {
-        this.changePassword.click();
-    }
 
     public void chooseCategory(WebElement element){
         element.click();

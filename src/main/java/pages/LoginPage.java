@@ -11,6 +11,7 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+
     @FindBy(name = "uid")
     private WebElement userName;
 
@@ -22,10 +23,13 @@ public class LoginPage extends BasePage {
 
     public void logIn(String name, String pass){
         waitForElement(userName);
-        this.userName.sendKeys(name);
-        this.password.sendKeys(pass);
-        this.loginButton.click();
+        userName.sendKeys(name);
+        password.sendKeys(pass);
+        loginButton.click();
     }
 
+    public boolean isPageVisible() {
+        return userName.isDisplayed();
+    }
 
 }

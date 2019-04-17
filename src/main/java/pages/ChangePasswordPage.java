@@ -11,6 +11,10 @@ public class ChangePasswordPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    public boolean isPageVisible() {
+        return oldPassword.isDisplayed();
+    }
+
     @FindBy(name = "oldpassword")
     private WebElement oldPassword;
 
@@ -28,11 +32,7 @@ public class ChangePasswordPage extends BasePage {
         oldPassword.sendKeys(oldPass);
         newPassword.sendKeys(newPass);
         confirmPassword.sendKeys(newPass);
-        submit.submit();
+        submit.click();
 
-    }
-
-    public WebElement getOldPasswordButton() {
-        return oldPassword;
     }
 }

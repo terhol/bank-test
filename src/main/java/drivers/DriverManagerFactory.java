@@ -21,6 +21,9 @@ public class DriverManagerFactory {
             case IE:
                 driverManager = new IEDriverManager();
                 break;
+            case EDGE:
+                driverManager = new EdgeDriverManager();
+                break;
             default:
                 driverManager = new ChromeDriverManager();
         }

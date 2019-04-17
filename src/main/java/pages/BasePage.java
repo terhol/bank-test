@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage {
+public abstract class BasePage {
     protected WebDriver driver;
 
     public BasePage(WebDriver driver){
@@ -19,7 +19,9 @@ public class BasePage {
     }
 
     public void waitForElement(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public abstract boolean isPageVisible();
 }
