@@ -7,26 +7,23 @@ import pages.ChangePasswordPage;
 import pages.MenuPage;
 import pages.LoginPage;
 import tests.BaseTest;
+import tests.PropertiesReader;
 
 /**
  * @author - Tereza Holm
- * <p>
+ *
  * Test for changing password and verifying if manager can log in with this new password - test cases SM1,SM2 and SM3.
  */
 //TODO better solution for case when Test changes password but fails before setting it back
 public class TestPasswordChange extends BaseTest {
-    private final String USERNAME = "mngr188296";
-    private String oldPassword = "1!";
-    private String newPassword = "123456!";
-    private String currentPassword = oldPassword;
     //TODO generator of Strings
     private String incorrectPassword = "abc";
 
     @Test()
     public void changePasswordIncorrect() {
-        login(USERNAME, currentPassword);
+        login(PropertiesReader.getUsername(), PropertiesReader.getPassword());
         chooseChangePasswordButton();
-        changePasswordToNew(incorrectPassword, newPassword);
+        changePasswordToNew(incorrectPassword, PropertiesReader.getNewPassword());
         Assert.assertTrue(isAlertPresent());
 
         ChangePasswordPage changePasswordPage = new ChangePasswordPage(driver);
@@ -37,12 +34,12 @@ public class TestPasswordChange extends BaseTest {
 
     @Test(priority = 1)
     public void changePasswordCorrect() {
-        login(USERNAME, currentPassword);
+        login(PropertiesReader.getUsername(), PropertiesReader.getPassword());
 
         chooseChangePasswordButton();
-        changePasswordToNew(oldPassword, newPassword);
+        changePasswordToNew(PropertiesReader.getPassword(), PropertiesReader.getNewPassword());
         Assert.assertTrue(isAlertPresent());
-        currentPassword = newPassword;
+        //currentPassword = newPassword;
 
         LoginPage loginPage = new LoginPage(driver);
         Assert.assertTrue(loginPage.isPageVisible());
@@ -51,7 +48,7 @@ public class TestPasswordChange extends BaseTest {
 
     @Test(priority = 2, dependsOnMethods = {"changePasswordCorrect"})
     public void logInWithNewPassword() {
-        login(USERNAME, currentPassword);
+        login(PropertiesReader.getUsername(), PropertiesReader.getNewPassword());
         MenuPage menuPage = new MenuPage(driver);
         Assert.assertEquals(menuPage.getMessage(), "Welcome To Manager's Page of Guru99 Bank");
 
@@ -59,10 +56,10 @@ public class TestPasswordChange extends BaseTest {
 
     @AfterClass
     public void changePasswordBack() {
-        login(USERNAME, currentPassword);
+        login(PropertiesReader.getUsername(), PropertiesReader.getNewPassword());
         chooseChangePasswordButton();
-        changePasswordToNew(newPassword, oldPassword);
-        currentPassword = oldPassword;
+        changePasswordToNew(PropertiesReader.getNewPassword(), PropertiesReader.getPassword());
+        //currentPassword = oldPassword;
 
         isAlertPresent();
     }

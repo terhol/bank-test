@@ -8,6 +8,7 @@ import org.testng.annotations.*;
 import pages.MenuPage;
 import pages.LoginPage;
 
+
 /**
  * @author - Tereza Holm
  * <p>
@@ -20,13 +21,13 @@ public class BaseTest {
 
     @BeforeSuite
     public void initializeDriver() {
-        driverManager = DriverManagerFactory.getWebDriver(DriverType.CHROME);
+        driverManager = DriverManagerFactory.getWebDriver(DriverType.FIREFOX);
         driver = driverManager.getWebDriver();
     }
 
     @BeforeMethod
     public void navigateToPage() {
-        driver.get("http://demo.guru99.com/V4/index.php");
+        driver.get(PropertiesReader.getUrl());
     }
 
     @AfterMethod

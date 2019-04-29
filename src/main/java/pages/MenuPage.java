@@ -18,6 +18,9 @@ public class MenuPage extends BasePage {
     @FindBy(linkText = "Change Password")
     private WebElement changePassword;
 
+    @FindBy(partialLinkText = "New Customer")
+    private WebElement addNewCustomer;
+
     @FindBy(xpath = "/html/body/div[3]/div/ul/li[15]/a")
     private WebElement logOutButton;
 

@@ -4,6 +4,8 @@
  * Driver for Chrome.
  */
 
+//TODO Chrome stopped working suddenly - "session not created: Chrome version must be between 70 and 73" error is thrown
+
 package drivers;
 
 import org.openqa.selenium.chrome.ChromeDriver;
