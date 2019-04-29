@@ -21,7 +21,6 @@ public class TestPasswordChange extends BaseTest {
 
     @Test()
     public void changePasswordIncorrect() {
-        login(PropertiesReader.getUsername(), PropertiesReader.getPassword());
         chooseChangePasswordButton();
         changePasswordToNew(incorrectPassword, PropertiesReader.getNewPassword());
         Assert.assertTrue(isAlertPresent());
@@ -34,8 +33,6 @@ public class TestPasswordChange extends BaseTest {
 
     @Test(priority = 1)
     public void changePasswordCorrect() {
-        login(PropertiesReader.getUsername(), PropertiesReader.getPassword());
-
         chooseChangePasswordButton();
         changePasswordToNew(PropertiesReader.getPassword(), PropertiesReader.getNewPassword());
         Assert.assertTrue(isAlertPresent());
@@ -48,6 +45,7 @@ public class TestPasswordChange extends BaseTest {
 
     @Test(priority = 2, dependsOnMethods = {"changePasswordCorrect"})
     public void logInWithNewPassword() {
+        Assert.assertTrue(isAlertPresent());
         login(PropertiesReader.getUsername(), PropertiesReader.getNewPassword());
         MenuPage menuPage = new MenuPage(driver);
         Assert.assertEquals(menuPage.getMessage(), "Welcome To Manager's Page of Guru99 Bank");
@@ -56,6 +54,7 @@ public class TestPasswordChange extends BaseTest {
 
     @AfterClass
     public void changePasswordBack() {
+
         login(PropertiesReader.getUsername(), PropertiesReader.getNewPassword());
         chooseChangePasswordButton();
         changePasswordToNew(PropertiesReader.getNewPassword(), PropertiesReader.getPassword());

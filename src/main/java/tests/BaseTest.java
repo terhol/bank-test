@@ -26,8 +26,9 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void navigateToPage() {
+    public void navigateToPageAndLogin() {
         driver.get(PropertiesReader.getUrl());
+        login(PropertiesReader.getUsername(), PropertiesReader.getPassword());
     }
 
     @AfterMethod
@@ -45,18 +46,18 @@ public class BaseTest {
         driver.quit();
     }
 
-    public void login(String userName, String password) {
+    protected void login(String userName, String password) {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.logIn(userName, password);
     }
 
-    public void logOut() {
+    private void logOut() {
         MenuPage menuPage = new MenuPage(driver);
         menuPage.logOut();
         isAlertPresent();
     }
 
-    public boolean isAlertPresent() {
+    protected boolean isAlertPresent() {
         boolean isPresent = false;
         try {
             Alert alert = driver.switchTo().alert();

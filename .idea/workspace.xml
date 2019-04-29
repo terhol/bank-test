@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aecc1365-9a40-4e3c-ad98-e79e60780d51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/AddNewCustomerPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTestExtended.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/PropertiesReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/tests_manager/TestAddNewCustomerAndAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/WebpageProperties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drivers/ChromeDriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTestExtended.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/tests_manager/TestPasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/tests_manager/TestPasswordChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/MenuPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/MenuPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/tests_manager/TestPasswordChange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/tests_manager/TestPasswordChange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/WebpageProperties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WebpageProperties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,12 +37,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="90">
+              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
                 <element signature="e#1067#1068#0" expanded="true" />
                 <element signature="e#1096#1097#0" expanded="true" />
               </folding>
@@ -62,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/WebpageProperties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -70,20 +60,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/PropertiesReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="44" column="61" lean-forward="true" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
+            <state relative-caret-position="-345">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#845#846#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1062#1063#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
-                <element signature="e#1165#1166#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,18 +74,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tests/BaseTestExtended.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -146,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/tests_manager/TestPasswordChange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+            <state relative-caret-position="705">
+              <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,14 +167,14 @@
         <option value="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/BasePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/drivers/FirefoxDriverManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/BaseTestExtended.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/tests_manager/TestAddNewCustomerAndAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/AddNewCustomerPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/drivers/ChromeDriverManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/PropertiesReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/BaseTestExtended.java" />
         <option value="$PROJECT_DIR$/src/main/resources/WebpageProperties" />
         <option value="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/PropertiesReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/tests_manager/TestPasswordChange.java" />
       </list>
     </option>
@@ -388,15 +356,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestPasswordChange - 2019.04.17 at 18h 10m 38s.xml">
-      <configuration name="TestPasswordChange" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestPasswordChange - 2019.04.17 at 18h 12m 27s.xml">
-      <configuration name="TestPasswordChange" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestPasswordChange - 2019.04.17 at 18h 12m 50s.xml">
-      <configuration name="TestPasswordChange" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TestPasswordChange - 2019.04.17 at 18h 15m 21s.xml">
       <configuration name="TestPasswordChange" configurationId="TestNG" />
     </history-entry>
@@ -416,6 +375,15 @@
       <configuration name="TestPasswordChange" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestPasswordChange - 2019.04.29 at 14h 33m 36s.xml">
+      <configuration name="TestPasswordChange" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestPasswordChange - 2019.04.29 at 15h 31m 08s.xml">
+      <configuration name="TestPasswordChange" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestPasswordChange - 2019.04.29 at 15h 31m 52s.xml">
+      <configuration name="TestPasswordChange" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestPasswordChange - 2019.04.29 at 15h 33m 35s.xml">
       <configuration name="TestPasswordChange" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -441,12 +409,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
@@ -603,61 +571,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/WebpageProperties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/PropertiesReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="-345">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/BaseTestExtended.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="41" />
+        <state relative-caret-position="180">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/PropertiesReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/WebpageProperties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="44" column="61" lean-forward="true" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/tests_manager/TestPasswordChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        <state relative-caret-position="705">
+          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
