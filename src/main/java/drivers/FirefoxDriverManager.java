@@ -14,7 +14,7 @@ public class FirefoxDriverManager extends DriverManager {
     @Override
     protected void createWebDriver() {
         FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
+        options.setHeadless(false);
         this.driver = new FirefoxDriver(options);
 
     }

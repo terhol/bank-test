@@ -36,6 +36,10 @@ public class MenuPage extends BasePage {
         return changePassword;
     }
 
+    public WebElement getAddNewCustomer() {
+        return addNewCustomer;
+    }
+
     public String getMessage(){
         return welcomePageMessage.getText();
     }
