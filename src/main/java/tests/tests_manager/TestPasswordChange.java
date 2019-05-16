@@ -7,7 +7,8 @@ import pages.ChangePasswordPage;
 import pages.MenuPage;
 import pages.LoginPage;
 import tests.BaseTest;
-import tests.PropertiesReader;
+import tests.DataPropertiesReader;
+
 
 /**
  * @author - Tereza Holm
@@ -18,11 +19,12 @@ import tests.PropertiesReader;
 public class TestPasswordChange extends BaseTest {
     //TODO generator of Strings
     private String incorrectPassword = "abc";
+    DataPropertiesReader reader = new DataPropertiesReader("WebpageProperties");
 
     @Test()
     public void changePasswordIncorrect() {
         chooseChangePasswordButton();
-        changePasswordToNew(incorrectPassword, PropertiesReader.getNewPassword());
+        changePasswordToNew(incorrectPassword, reader.getData("newPassword"));
         Assert.assertTrue(isAlertPresent());
 
         ChangePasswordPage changePasswordPage = new ChangePasswordPage(driver);
@@ -34,9 +36,8 @@ public class TestPasswordChange extends BaseTest {
     @Test(priority = 1)
     public void changePasswordCorrect() {
         chooseChangePasswordButton();
-        changePasswordToNew(PropertiesReader.getPassword(), PropertiesReader.getNewPassword());
+        changePasswordToNew(reader.getData("password"), reader.getData("newPassword"));
         Assert.assertTrue(isAlertPresent());
-        //currentPassword = newPassword;
 
         LoginPage loginPage = new LoginPage(driver);
         Assert.assertTrue(loginPage.isPageVisible());
@@ -46,7 +47,7 @@ public class TestPasswordChange extends BaseTest {
     @Test(priority = 2, dependsOnMethods = {"changePasswordCorrect"})
     public void logInWithNewPassword() {
         Assert.assertTrue(isAlertPresent());
-        login(PropertiesReader.getUsername(), PropertiesReader.getNewPassword());
+        login(reader.getData("username"), reader.getData("newPassword"));
         MenuPage menuPage = new MenuPage(driver);
         Assert.assertEquals(menuPage.getMessage(), "Welcome To Manager's Page of Guru99 Bank");
 
@@ -55,10 +56,9 @@ public class TestPasswordChange extends BaseTest {
     @AfterClass
     public void changePasswordBack() {
 
-        login(PropertiesReader.getUsername(), PropertiesReader.getNewPassword());
+        login(reader.getData("username"), reader.getData("newPassword"));
         chooseChangePasswordButton();
-        changePasswordToNew(PropertiesReader.getNewPassword(), PropertiesReader.getPassword());
-        //currentPassword = oldPassword;
+        changePasswordToNew(reader.getData("newPassword"), reader.getData("password"));
 
         isAlertPresent();
     }

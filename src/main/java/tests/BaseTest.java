@@ -27,8 +27,9 @@ public class BaseTest {
 
     @BeforeMethod
     public void navigateToPageAndLogin() {
-        driver.get(PropertiesReader.getUrl());
-        login(PropertiesReader.getUsername(), PropertiesReader.getPassword());
+        DataPropertiesReader reader = new DataPropertiesReader("WebpageProperties");
+        driver.get(reader.getData("url"));
+        login(reader.getData("username"), reader.getData("password"));
     }
 
     @AfterMethod
